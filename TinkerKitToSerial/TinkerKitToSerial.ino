@@ -1,5 +1,7 @@
 /* This sketch read the Esplora tinkerkit connections and sends the values
 to the serial monitor.
+  You can find the Fritzing file on GitHub to see how I wired up the buttons:
+ http://github.com/circuit69/EsploraTinkerkit
  
  Modified by Joel Krueger 12-8-2013.
 */ 
