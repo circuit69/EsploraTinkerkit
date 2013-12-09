@@ -1,7 +1,9 @@
 
 /* This sketch turns the Esplora into a Mame game controller with buttons added to
- the tinkerkit connections for adding Escape, Enter, start button [1] and credits [5]
+ the tinkerkit connections for adding Escape, Enter, start button [1] and add credits [5]
  And then adding the joystick button press for [Enter]
+ You can find the Fritzing file on GitHub to see how I wired up the buttons:
+ https://github.com/circuit69/EsploraTinkerkit
  
  Modified by Joel Krueger 12-8-2013.
  
@@ -12,8 +14,6 @@
  This example is in the public domain, please attribute
  */
 #include <Esplora.h>
-#include <TFT.h>            // Arduino LCD library
-#include <SPI.h>
 const int Tinkerkit1 = 11;        //Left orange Tinkerkit output pin 11 used as an input
 const int Tinkerkit2 = 3;         //Right orange Tinkerkit output pin 3 used as an input
 unsigned int button1 = 1;         //Left orange Tinkerkit
@@ -96,15 +96,6 @@ void setup() {
   //Initialize orange Tinkerkit outputs as inputs
   pinMode(Tinkerkit1,INPUT);
   pinMode(Tinkerkit2,INPUT);
-  EsploraTFT.begin();
-  EsploraTFT.background(0,0,0);
-  EsploraTFT.stroke(200,20,80);
-  EsploraTFT.setTextSize(3);
-  EsploraTFT.text("KRUEG's\n",20,10);
-  EsploraTFT.stroke(20,210,180);
-  EsploraTFT.setTextSize(2);
-  EsploraTFT.text("MAME",50,40);
-  EsploraTFT.text("Controller",20,60);
 }
 
 void loop() { 
